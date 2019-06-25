@@ -7,7 +7,13 @@ from dse.widgets import terminalWidgets, simpleWidgets, templateWidget
 
 class CreateFromMold(templateWidget.nodeHandler):
     """
-    Documentation from the API
+    gpi plugin widget
+    Every gpi plugin must inherit the nodeHandler template widget
+
+
+
+
+    Documentation from the De-la-mo API
     Create a layer atop the specified mold. 
      * direction: "OFFSET" or "ORIG"
      * thickness: Thickness of layer (offsetting operation)
@@ -22,6 +28,10 @@ class CreateFromMold(templateWidget.nodeHandler):
 
     @classmethod
     def nH_getPriority(cls,node, astTools):
+        """
+        getPriority is also an inherited function
+        If it is not defined here, the widget's priority is assigned based on if it passes the tests put on it in the nodeHandler.nH_getPriority function.
+        """
 
         condition1 = False
         condition2 = False
@@ -50,6 +60,9 @@ class CreateFromMold(templateWidget.nodeHandler):
 
     @staticmethod
     def nH_widgetBuilder(node, astTools):
+        """
+        nH_widgetBuilder is defined in nodeHander class but it MUST be overwritten. This is where the widget and its functionality is defined. The only purpose of the method defined in nodeHandler is to alert the program that the method hasn't been overwritten and can't be used.
+        """
         # Make the frame
         widget = QFrame()
         layout = QVBoxLayout()
