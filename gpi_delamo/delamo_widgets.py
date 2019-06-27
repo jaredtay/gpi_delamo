@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame
 from PyQt5.QtCore import Qt
 
-from dse.widgets import terminalWidgets, simpleWidgets, templateWidget
+from gpi.widgets import terminalWidgets, simpleWidgets, templateWidget
 
 # ===========================================================================================
 
