@@ -11,8 +11,6 @@ class CreateFromMold(templateWidget.nodeHandler):
     Every gpi plugin must inherit the nodeHandler template widget
 
 
-
-
     Documentation from the De-la-mo API
     Create a layer atop the specified mold. 
      * direction: "OFFSET" or "ORIG"
